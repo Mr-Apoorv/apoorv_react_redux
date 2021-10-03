@@ -26,28 +26,31 @@ export default function Category() {
   });
   return (
     <div className="container">
-      <div className="dropdown my-3">
-        <button
-          className="btn btn-dark dropdown-toggle btn-large"
-          type="button"
-          id="dropdownMenuButton1"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Categories
-        </button>
-        <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li>
-            <Link className="dropdown-item" to="/categories/Laptops">
-              Laptops
-            </Link>
-          </li>
-          <li>
-            <Link className="dropdown-item" to="/categories/Mobiles">
-              Mobiles
-            </Link>
-          </li>
-        </ul>
+      <div className="container d-flex mt-5 justify-content-center">
+        <h4 className="my-3 mx-3">Product category</h4>
+        <div className="dropdown my-3">
+          <button
+            className="btn btn-dark dropdown-toggle btn-large"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Categories
+          </button>
+          <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <Link className="dropdown-item" to="/categories/Laptops">
+                Laptops
+              </Link>
+            </li>
+            <li>
+              <Link className="dropdown-item" to="/categories/Mobiles">
+                Mobiles
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div className="row my-3">
