@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 import store from "../redux/store";
 import { useEffect } from "react";
 import { getProduct } from "../redux/actions/productActions";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function ProductDetails() {
   const dispatch = useDispatch();
@@ -31,24 +31,36 @@ export default function ProductDetails() {
       // console.log("setreducer", setProduct(jsonProducts));
       // console.log("state", store.getState().setReducer);
     });
-  });
+  }, []);
+
+  const myState = useSelector((state) => state.getReducer);
+  // const dispatch = useDispatch();
+
+  // let filteredProducts = store.getState().getReducer.filter((product) => {
+  //   return true;
+  // });
+  // console.log(
+  //   store.getState().getReducer,
+  //   myState,
+  //   "State data value from details page"
+  // );
 
   return (
     <div>
-      Product details
+      <h1 className="text-center my-4">Product details</h1>
       <div className="container mx-auto my-3">
-        {store.getState().getReducer.map((product) => {
+        {myState.map((product) => {
           console.log("hello w");
           return (
             <div
               key={product.id}
-              className="col-sm-12 col-md-6 col-lg-4 my-5"
-              onClick={
-                (dispatch(getProduct(product.id)),
-                console.log(product.id, "dasdfasf"))
-              }
+              className="col-sm-12 my-5"
+              // onClick={
+              //   (dispatch(getProduct(product.id)),
+              //   console.log(product.id, "dasdfasf"))
+              // }
             >
-              <div className="card" style={{ width: "18rem" }}>
+              <div className="card mx-auto" style={{ width: "18rem" }}>
                 <img
                   src="https://cdn.pixabay.com/photo/2016/02/19/11/19/office-1209640_960_720.jpg"
                   className="card-img-top"

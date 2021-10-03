@@ -2,7 +2,7 @@ import setConstants from "../constants/productConstants";
 
 let initialState = [
   {
-    id: 1,
+    id: 1555,
     name: "laptop",
     model: "dasdas",
     price: "68667",
