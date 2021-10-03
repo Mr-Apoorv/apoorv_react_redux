@@ -1,7 +1,12 @@
 import AllProducts from "./components/AllProducts";
 import Category from "./components/Category";
 import NavBar from "./components/NavBar";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import ProductDetails from "./components/ProductDetails";
 
 function App() {
@@ -13,12 +18,14 @@ function App() {
           <Category />
           <AllProducts />
         </Route>
+        <Redirect from="/categories/product/:id" to="/product/:id" />
         <Route path="/product/:id">
           <ProductDetails />
         </Route>
         <Route path="/categories/:category">
           <Category />
         </Route>
+
         <Route>
           <div className="container bg-danger text-warning vh-100">
             {"404 Error not found"}

@@ -25,7 +25,7 @@ export default function ProductList() {
               console.log(product.id, "product id")
             }
           >
-            <div className="card shadow " style={{ width: "18rem" }}>
+            <div className="card shadow-lg " style={{ width: "18rem" }}>
               <img
                 src="https://cdn.pixabay.com/photo/2016/02/19/11/19/office-1209640_960_720.jpg"
                 className="card-img-top"

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, BrowserRouter } from "react-router-dom";
 import { useParams } from "react-router";
 import store from "../redux/store";
 import { useDispatch } from "react-redux";
@@ -59,10 +59,10 @@ export default function Category() {
             <div
               key={product.id}
               className="col-sm-12 col-md-6 col-lg-4 my-5"
-              onClick={
-                (dispatch(getProduct(product.id)),
-                console.log(product.id, "product id"))
-              }
+              // onClick={
+              //   (dispatch(getProduct(product.id)),
+              //   console.log(product.id, "product id"))
+              // }
             >
               <div className="card shadow" style={{ width: "18rem" }}>
                 <img
