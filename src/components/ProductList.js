@@ -1,6 +1,6 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import store from "../redux/store";
+import { useSelector } from "react-redux";
+// import store from "../redux/store";
 import { Link } from "react-router-dom";
 // import { getProduct } from "../redux/actions/productActions";
 // import { setReducer } from "../redux/reducers/productReducers";
@@ -20,10 +20,10 @@ export default function ProductList() {
           <div
             key={product.id}
             className="col-sm-12 col-md-6 col-lg-4 my-5 "
-            onClick={
-              //   (dispatch(getProduct(product.id)),
-              console.log(product.id, "product id")
-            }
+            // onClick={
+            //   //   (dispatch(getProduct(product.id)),
+            //   console.log(product.id, "product id")
+            // }
           >
             <div className="card shadow-lg " style={{ width: "18rem" }}>
               <img

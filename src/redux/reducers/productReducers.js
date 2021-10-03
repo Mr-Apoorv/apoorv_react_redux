@@ -1,13 +1,6 @@
 import setConstants from "../constants/productConstants";
 
-let initialState = [
-  {
-    id: 1555,
-    name: "laptop",
-    model: "dasdas",
-    price: "68667",
-  },
-];
+let initialState = [];
 
 export const setReducer = (state = initialState, action) => {
   if (action.type === setConstants.SET_PRODUCTS) {
@@ -20,7 +13,7 @@ export const setReducer = (state = initialState, action) => {
 
 export const getReducer = (state = [], action) => {
   if (action.type === setConstants.GET_PRODUCT) {
-    return [...state, action.payload];
+    return [action.payload];
   } else {
     return state;
   }

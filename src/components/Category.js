@@ -1,14 +1,14 @@
 import React from "react";
-import { Link, BrowserRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router";
 import store from "../redux/store";
-import { useDispatch } from "react-redux";
-import { getProduct } from "../redux/actions/productActions";
+// import { useDispatch } from "react-redux";
+// import { getProduct } from "../redux/actions/productActions";
 // import { setReducer } from "../redux/reducers/productReducers";
 
 export default function Category() {
   let { category } = useParams();
-  console.log("category is", category);
+  // console.log("category is", category);
 
   const getCategoryId = (category) => {
     if (category === "Laptops") {
@@ -20,7 +20,7 @@ export default function Category() {
     }
   };
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   let filteredProducts = store.getState().setReducer.filter((product) => {
     return product.categoryId === getCategoryId(category);
   });

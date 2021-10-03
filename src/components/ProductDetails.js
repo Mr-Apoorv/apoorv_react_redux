@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router";
-import store from "../redux/store";
+// import store from "../redux/store";
 import { useEffect } from "react";
 import { getProduct } from "../redux/actions/productActions";
 import { useDispatch, useSelector } from "react-redux";
@@ -50,7 +50,7 @@ export default function ProductDetails() {
       <h1 className="text-center my-4">Product details</h1>
       <div className="container mx-auto my-3">
         {myState.map((product) => {
-          console.log("hello w");
+          // console.log("hello w");
           return (
             <div
               key={product.id}
