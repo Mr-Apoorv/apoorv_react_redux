@@ -3,7 +3,7 @@ import React from "react";
 export default function NavBar() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-danger">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
             Products store

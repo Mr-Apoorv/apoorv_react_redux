@@ -60,17 +60,31 @@ export default function ProductDetails() {
               //   console.log(product.id, "dasdfasf"))
               // }
             >
-              <div className="card mx-auto" style={{ width: "18rem" }}>
-                <img
-                  src="https://cdn.pixabay.com/photo/2016/02/19/11/19/office-1209640_960_720.jpg"
-                  className="card-img-top"
-                  alt="product image"
-                />
-                <div className="card-body">
-                  <h5 className="card-title">{product.name}</h5>
-                  <p className="card-text">{product.model}</p>
-                  <p className="card-text">{product.price}</p>
-                  <p className="card-text">{product.description}</p>
+              <div className="row mx-auto">
+                <div className="col-md-6">
+                  <img
+                    src="https://cdn.pixabay.com/photo/2016/02/19/11/19/office-1209640_960_720.jpg"
+                    className="card-img-top"
+                    alt="product image"
+                  />
+                </div>
+                <div className="col-md-6">
+                  <h5 className="fs-bold">
+                    <strong>Name : </strong>
+                    {product.name}
+                  </h5>
+                  <p className="card-text my-3">
+                    <strong>Model : </strong>
+                    {product.model}
+                  </p>
+                  <p className="card-text">
+                    <strong>Price : </strong>
+                    {product.price}
+                  </p>
+                  <p className="card-text">
+                    <strong>Description : </strong>
+                    {product.description}
+                  </p>
                 </div>
               </div>
             </div>

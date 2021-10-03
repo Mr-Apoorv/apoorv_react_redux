@@ -28,7 +28,7 @@ export default function Category() {
     <div className="container">
       <div className="dropdown my-3">
         <button
-          className="btn btn-success dropdown-toggle btn-large"
+          className="btn btn-dark dropdown-toggle btn-large"
           type="button"
           id="dropdownMenuButton1"
           data-bs-toggle="dropdown"
